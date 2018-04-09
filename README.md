@@ -1,9 +1,9 @@
 # assignment
 
-Source Code
+Source Code:
   src/main/java
   
-Unit Test Code
+Unit Test Code:
   src/test/java
 
 InstructionsServiceImpl - This class is used to provide instructions for testing the application.

@@ -1,5 +1,4 @@
 # assignment
-Assignment Repository
 
 Source Code
   src/main/java

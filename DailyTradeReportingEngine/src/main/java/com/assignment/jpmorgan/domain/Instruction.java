@@ -36,7 +36,7 @@ public class Instruction {
 		this.settlementDate = settlementDate;
 		this.units = units;
 		this.pricePerUnit = pricePerUnit;
-		this.tradeAmount = pricePerUnit * units * agreedFx;
+		calculateTradeAmount();
 	}
 
 
@@ -68,6 +68,7 @@ public class Instruction {
 
 	public void setAgreedFx(double agreedFx) {
 		this.agreedFx = agreedFx;
+		calculateTradeAmount();
 	}
 	
 
@@ -108,6 +109,7 @@ public class Instruction {
 
 	public void setUnits(int units) {
 		this.units = units;
+		calculateTradeAmount();
 	}
 	
 
@@ -118,6 +120,7 @@ public class Instruction {
 
 	public void setPricePerUnit(double pricePerUnit) {
 		this.pricePerUnit = pricePerUnit;
+		calculateTradeAmount();
 	}
 
 	
@@ -192,5 +195,10 @@ public class Instruction {
 				+ ", currency=" + currency + ", instructionDate=" + instructionDate + ", settlementDate="
 				+ settlementDate + ", units=" + units + ", pricePerUnit=" + pricePerUnit + "]";
 	}	
+	
+	
+	private void calculateTradeAmount() {
+		tradeAmount = pricePerUnit * units * agreedFx;
+	}
 	
 }

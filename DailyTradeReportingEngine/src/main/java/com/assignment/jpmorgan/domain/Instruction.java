@@ -13,6 +13,7 @@ public class Instruction {
 	private LocalDate settlementDate;
 	private int units;
 	private double pricePerUnit;
+	private double tradeAmount;
 	
 	
 	public Instruction() {		
@@ -35,6 +36,7 @@ public class Instruction {
 		this.settlementDate = settlementDate;
 		this.units = units;
 		this.pricePerUnit = pricePerUnit;
+		this.tradeAmount = pricePerUnit * units * agreedFx;
 	}
 
 
@@ -120,7 +122,7 @@ public class Instruction {
 
 	
 	public double getTradeAmount() {
-		return pricePerUnit * units * agreedFx;
+		return tradeAmount;
 	}
 	
 
